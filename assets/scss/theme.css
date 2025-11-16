@@ -190,6 +190,10 @@ h2,
   font-size: clamp(20px, 2.8vw, 28px);
 }
 
+.p-2 {
+  padding: 8px;
+}
+
 #product-slider .slick-arrow {
   background-color: white;
   border: 1px solid #E6E6E6;
