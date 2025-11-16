@@ -1,0 +1,21 @@
+.breadcrumb-sec{
+    padding: 30px 0;
+    background-color: var(--primary);
+    .breadcrumb-list{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        li{
+            a{
+                color: white;
+                font-size: 14px;
+                cursor: default;
+                &.active{
+                    font-weight: 600;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
