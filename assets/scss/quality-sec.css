@@ -1,0 +1,31 @@
+.quality-sec {
+  position: relative;
+  background-color: var(--gray-dark);
+  padding-top: 225px;
+  padding-bottom: 200px;
+  z-index: 1;
+}
+.quality-sec .image-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.quality-sec .image-wrapper img {
+  max-width: 900px;
+  width: 100%;
+  margin: 100px 0;
+}
+
+@media (max-width: 1200px) {
+  .quality-sec {
+    padding: clamp(80px, 8vw, 100px) 0;
+  }
+  .quality-sec .image-wrapper {
+    position: static;
+  }
+  .quality-sec .image-wrapper img {
+    max-height: unset;
+    margin: 0;
+  }
+}/*# sourceMappingURL=quality-sec.css.map */

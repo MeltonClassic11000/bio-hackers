@@ -1,0 +1,161 @@
+.header {
+  position: relative;
+  z-index: 1000;
+}
+.header .topbar {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.header .topbar .topbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header .topbar .topbar-wrapper .contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header .topbar .topbar-wrapper .contact-wrapper .contact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .topbar .topbar-wrapper .contact-wrapper .contact .content {
+  font-size: 12px;
+  color: var(--dark);
+  text-decoration: none;
+}
+.header .main-header {
+  padding: 20px 0;
+}
+.header .main-header .header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.header .main-header .header-wrapper .nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+  width: 100%;
+}
+.header .main-header .header-wrapper .nav .menu-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(30px, 3vw, 45px);
+  padding: 0;
+  margin: 0;
+}
+.header .main-header .header-wrapper .nav .menu-links li a {
+  font-family: "figtree-md", sans-serif;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.header .main-header .header-wrapper .nav .menu-links li a:hover {
+  color: var(--primary);
+}
+.header .main-header .header-wrapper .nav .menu-links li a:hover::after {
+  width: 100%;
+}
+.header .main-header .header-wrapper .nav .menu-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+}
+.header .main-header .header-wrapper .nav .right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .search-wrapper {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  min-width: 400px;
+  width: 100%;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .search-wrapper .search {
+  outline: none;
+  border: none;
+  color: #999999;
+  width: 100%;
+  background-color: transparent;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .search-wrapper .search::-moz-placeholder {
+  color: #999999;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .search-wrapper .search::placeholder {
+  color: #999999;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header .main-header .header-wrapper .nav .right-wrapper .icon-wrapper a:nth-child(1) {
+  border-right: 1px solid var(--border);
+  padding-right: 18px;
+}
+.header .main-header .header-wrapper .hamburger {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .header .main-header .header-wrapper {
+    gap: 20px;
+  }
+  .header .main-header .header-wrapper .nav {
+    gap: 12px;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    position: relative;
+  }
+  .header .main-header .header-wrapper .nav {
+    display: none;
+    position: absolute;
+    background-color: var(--gray);
+    top: 100%;
+    left: 0;
+    padding: 20px 15px;
+  }
+  .header .main-header .header-wrapper .nav .menu-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .header .main-header .header-wrapper .nav .right-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .header .main-header .header-wrapper .nav .right-wrapper .search-wrapper {
+    min-width: 100%;
+  }
+  .header .main-header .header-wrapper .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+  .header .topbar .topbar-wrapper .contact-wrapper:first-child {
+    display: none;
+  }
+  .header .main-header .header-wrapper .logo img {
+    width: 140px;
+  }
+}/*# sourceMappingURL=header.css.map */

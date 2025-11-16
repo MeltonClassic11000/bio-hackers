@@ -1,0 +1,88 @@
+.product-sec {
+    &.product-sec-s1{
+        margin-top: -244px;
+    }
+
+    .product-card {
+        margin: 0 10px;
+
+        .image-wrapper {
+            padding: 12px 0 20px 0;
+            background-color: var(--gray);
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+
+            .inner-image {
+                width: fit-content;
+                margin-left: auto;
+
+                &.active {
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                    width: fit-content;
+                    margin-left: auto;
+                    position: relative;
+                    padding: 10px;
+                    right: 8px;
+
+                    img {
+                        display: block;
+                    }
+
+                    .product-icon2 {
+                        display: unset;
+                        margin-left: unset;
+                        margin-bottom: unset;
+                        margin-right: unset;
+                    }
+
+                }
+
+                img {
+                    display: none;
+                }
+
+                .product-icon2 {
+                    display: block;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: 12px;
+                }
+            }
+
+            .product-btn {
+                background-color: black;
+                color: white;
+                padding: 4px 12px;
+                text-transform: uppercase;
+                width: fit-content;
+                font-weight: 500;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-left: auto;
+            }
+        }
+
+        .content-wrapper {
+            padding: 18px 12px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+// Media Query
+@media (max-width:768px) {
+    .product-sec{
+        .product-card{
+            margin: 0 20px;
+        }
+    }
+}

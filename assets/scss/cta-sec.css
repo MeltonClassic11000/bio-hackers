@@ -1,0 +1,31 @@
+.cta-sec {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.cta-sec .subscribe-wrapper {
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 556px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px;
+}
+.cta-sec .subscribe-wrapper input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: white;
+  text-transform: capitalize;
+  padding: 0 0 0 18px;
+}
+.cta-sec .subscribe-wrapper input::-moz-placeholder {
+  color: white;
+}
+.cta-sec .subscribe-wrapper input::placeholder {
+  color: white;
+}/*# sourceMappingURL=cta-sec.css.map */

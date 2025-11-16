@@ -1,0 +1,31 @@
+.service-sec {
+    .service-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .service-card {
+            .service-img {
+                width: clamp(110px, 10vw, 140px);
+                height: clamp(110px, 10vw, 140px);
+            }
+        }
+    }
+}
+
+// Media Query
+@media (max-width:992px) {
+    .service-sec {
+        .service-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .service-sec {
+        .service-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
