@@ -1,37 +1,22 @@
 $(document).ready(function () {
+  // Header
   $('.hamburger').click(function () {
-    $('.nav').toggle(); // toggle() automatically switches display block/flex
+    $('.nav').toggle();
   });
 
-
-});
-
-// Ensure jQuery is loaded before this script
-$(document).ready(function () {
+  // Faq Section
   var $faqItem = $('.faq-item');
   var $faqQuestion = $('.faq-question');
-
-  // Page Load State: First item already has the 'active' class in HTML
-  // We don't need any additional JS for the initial state.
-
   $faqQuestion.on('click', function () {
     var $currentItem = $(this).closest('.faq-item');
-
-    // Check if the clicked item is already active
     var isActive = $currentItem.hasClass('active');
-
-    // Close all other active items (Accordion functionality)
     if (!isActive) {
       $faqItem.removeClass('active');
     }
-
-    // Toggle the 'active' class on the clicked item
-    // If it was open, it closes. If it was closed, it opens.
     $currentItem.toggleClass('active');
   });
-});
 
-$(document).ready(function(){
+  // Slider
   $('.product-slider').slick({
     infinite: true,
     slidesToShow: 4,
@@ -80,4 +65,31 @@ $(document).ready(function(){
       }
     ]
   });
+
+  // thumbnail Images
+  let firstThumb = $(".thumbnail img").first();
+  firstThumb.parent().addClass("active");
+  $(".main-image img").attr("src", firstThumb.attr("src"));
+
+  $(".thumbnail img").click(function () {
+    $(".thumbnail").removeClass("active");
+    $(this).parent().addClass("active");
+    $(".main-image img").attr("src", $(this).attr("src"));
+  });
+
+  // Quantity
+  $(document).ready(function () {
+    $(".plus-btn").click(function () {
+      let input = $(".qty-display");
+      let val = parseInt(input.val());
+      input.val(val + 1);
+    });
+
+    $(".minus-btn").click(function () {
+      let input = $(".qty-display");
+      let val = parseInt(input.val());
+      if (val > 1) input.val(val - 1);
+    });
+  });
 });
+

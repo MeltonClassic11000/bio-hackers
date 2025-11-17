@@ -10,7 +10,7 @@
   --gray: #F2F2F2;
   --gray-light: #F1F1F1;
   --border: #B6B6B8;
-  --section-padding: clamp(80px, 8vw, 100px) 0;
+  --section-padding: clamp(45px, 8vw, 100px) 0;
 }
 
 a {

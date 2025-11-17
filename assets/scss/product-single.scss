@@ -1,0 +1,166 @@
+.product-single-sec {
+    .product-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(24px, 5vw, 50px);
+
+
+        .product-gallery {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 20px;
+            max-height: 584px;
+            height: 100%;
+
+            .main-image {
+                padding: 15px;
+                background-color: var(--gray);
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+            }
+
+            .thumbnail-images {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 106px;
+                width: 100%;
+
+                .thumbnail {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid var(--gray);
+                    background-color: var(--gray);
+                    cursor: pointer;
+
+                    &.active {
+                        border-color: var(--primary);
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .product-details {
+            .stock-status {
+                color: #03AC4F;
+            }
+
+            .price {
+                font-size: 28px;
+                color: black;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .faq-item {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--border);
+
+                &.active {
+                    .faq-question {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .faq-answer {
+                        display: block;
+                    }
+                }
+
+                .faq-question {
+                    background-color: transparent;
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding: 0;
+                    position: relative;
+                    width: 100%;
+                    text-align: start;
+                    padding-right: 20px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        background: url('./../img/icons/dropdown.svg') center/contain no-repeat;
+                        width: 12px;
+                        height: 7px;
+                        transition: all .3s ease;
+                    }
+                }
+
+                .faq-answer {
+                    display: none;
+                    padding-top: 20px;
+                    line-height: 26px;
+                }
+            }
+
+            .quantity-wrapper {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid var(--border);
+
+                .quantity-control {
+                    background-color: var(--gray-light);
+                    padding: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 16px;
+                    width: fit-content;
+
+                    .qty-btn {
+                        background-color: white;
+                        width: 34px;
+                        height: 34px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+                        text-align: center;
+                        border: none;
+                    }
+
+                    .qty-display {
+                        background-color: transparent;
+                        border: none;
+                        text-align: center;
+                        max-width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media Query
+@media (max-width:992px) {
+    .product-single-sec {
+    .product-wrapper {
+        grid-template-columns: 1fr;
+
+        .product-gallery {
+            min-height: clamp(300px,50vw,500px);
+            gap: 20px;
+            .main-image{
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+}
