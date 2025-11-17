@@ -316,3 +316,9 @@ section {
         }
     }
 }
+
+@media (max-width:576px) {
+    .btn{
+        padding: 8px 20px;
+    }
+}

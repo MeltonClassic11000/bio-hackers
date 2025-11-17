@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/scss/slick-theme.css">
     <link rel="stylesheet" href="./assets/scss/header.css">
     <link rel="stylesheet" href="./assets/scss/breadcrumb-sec.css">
-    <link rel="stylesheet" href="./assets/scss/product-single.css">
+    <link rel="stylesheet" href="./assets/scss/shipping-cart.css">
     <link rel="stylesheet" href="./assets/scss/footer.css">
 </head>
 
@@ -88,81 +88,74 @@
                 </ul>
             </div>
         </section>
-        <section class="product-single-sec">
+        <section class="shipping-cart">
             <div class="container">
-                <div class="product-wrapper">
-                    <div class="product-gallery">
-                        <div class="main-image">
-                            <img style="max-width: 380px;" src="./assets/img/gallery-main-img.webp" width="380"
-                                height="150" alt="Product Image" class="mx-auto img-fluid">
+                <h1 class="text-center main-title text-black">my shopping cart</h1>
+                <div class="cart-wrapper">
+                    <div>
+                        <div class="cart-details">
+                            <div class="cart-header">
+                                <div class="product-col">Product</div>
+                                <div class="price-col">Price</div>
+                                <div class="quantity-col">Quantity</div>
+                            </div>
+                            <div class="cart-items">
+                                <div class="cart-item" data-price="100.00">
+                                    <div class="product-info">
+                                        <img src="./assets/img/gallery-main-img.webp" width="90" height="40"
+                                            alt="Sherwood Blue">
+                                        <span class="fw-bold">Sherwood Blue</span>
+                                    </div>
+                                    <div class="price">$100.00</div>
+                                    <div class="quantity-control">
+                                        <button class="qty-minus">-</button>
+                                        <input type="text" class="qty-input" value="5" min="1">
+                                        <button class="qty-plus">+</button>
+                                    </div>
+                                    <button class="remove-item">×</button>
+                                </div>
+                                <div class="cart-item" data-price="100.00">
+                                    <div class="product-info">
+                                        <img src="./assets/img/gallery-main-img.webp" width="90" height="40"
+                                            alt="Sherwood Blue 2">
+                                        <span class="fw-bold">Sherwood Blue 2</span>
+                                    </div>
+                                    <div class="price">$100.00</div>
+                                    <div class="quantity-control">
+                                        <button class="qty-minus">-</button>
+                                        <input type="text" class="qty-input" value="5" min="1">
+                                        <button class="qty-plus">+</button>
+                                    </div>
+                                    <button class="remove-item">×</button>
+                                </div>
+                                <div class="continue-shopping">
+                                    <button class="btn btn-outline-dark">CONTINUE SHOPPING</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="thumbnail-images">
-                            <div class="thumbnail active">
-                                <img src="./assets/img/icons/category-icon-1.webp" width="75" height="36"
-                                    alt="Thumbnail 1">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="./assets/img/product-img-1.webp" width="75" height="36" alt="Thumbnail 2">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="./assets/img/gallery-main-img.webp" width="75" height="36" alt="Thumbnail 3">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="./assets/img/icons/category-icon-1.webp" width="75" height="36"
-                                    alt="Thumbnail 4">
+                        <div class="coupon-section">
+                            <div class="coupon-code-label">Coupon Code</div>
+                            <div class="coupon-input-group">
+                                <input type="text" id="couponCode" placeholder="Enter Code">
+                                <button id="applyCoupon" class="btn btn-primary">APPLY COUPON</button>
                             </div>
                         </div>
                     </div>
-                    <div class="product-details">
-                        <p class="stock-status">Available in Stock</p>
-                        <h1>Glco X Old Pal Raven</h1>
-                        <div class="rating d-flex align-items-center gap-1 mb-3">
-                            <img src="./assets/img/icons/star.svg" width="16" height="16" alt="Rating Icon">
-                            <img src="./assets/img/icons/star.svg" width="16" height="16" alt="Rating Icon">
-                            <img src="./assets/img/icons/star.svg" width="16" height="16" alt="Rating Icon">
-                            <img src="./assets/img/icons/star.svg" width="16" height="16" alt="Rating Icon">
-                            <img src="./assets/img/icons/start-1.svg" width="16" height="16" alt="Rating Icon">
-                            <span style="color: #717171;" class="fw-meidum d-block">4.8 Star Rating</span>
+                    <div class="cart-summary">
+                        <span class="summary-title">Cart Total</span>
+                        <div class="summary-line">
+                            <span class="summary-text">Subtotal:</span>
+                            <span class="subtotal-amount">$200.00</span>
                         </div>
-                        <p class="price">$99</p>
-                        <div class="faq-wrapper">
-                            <div class="faq-item">
-                                <button class="faq-question">
-                                    Description
-                                </button>
-                                <div class="faq-answer">
-                                    <p class="mb-0">Our lenses are engineered with advanced spectrum filtering
-                                        technology
-                                        that
-                                        blocks harmful.</p>
-                                </div>
-                            </div>
-                            <div class="faq-item">
-                                <button class="faq-question">
-                                    Benefits
-                                    <span class="toggle-icon"></span>
-                                </button>
-                                <div class="faq-answer">
-                                    <p class="mb-0">Our lenses are engineered with advanced spectrum filtering
-                                        technology
-                                        that
-                                        blocks harmful.</p>
-                                </div>
-                            </div>
+                        <div class="summary-line">
+                            <span class="summary-text">Shipping:</span>
+                            <span class="shipping-amount">Free</span>
                         </div>
-                        <span class="fw-semibold d-block mb-3">Quantity</span>
-                        <div class="quantity-wrapper">
-                            <div class="quantity-control">
-                                <button class="qty-btn minus-btn">-</button>
-                                <input type="text" class="qty-display" value="5" readonly>
-                                <button class="qty-btn plus-btn">+</button>
-                            </div>
+                        <div class="summary-line total-line">
+                            <span class="summary-text">Total:</span>
+                            <span class="total-amount">$200.00</span>
                         </div>
-                        <button class="btn btn-primary w-100 mb-3">ADD TO CART</button>
-                        <button class="btn btn-outline-dark w-100">BUY NOW
-                            <img src="./assets/img/icons/arrow-left.svg" style="transform: rotate(180deg);" width="15"
-                                height="13" alt="Icon" loading="lazy">
-                        </button>
+                        <button style="border-radius: 0;" class="btn btn-primary w-100">PROCEED TO CHECKOUT</button>
                     </div>
                 </div>
             </div>
