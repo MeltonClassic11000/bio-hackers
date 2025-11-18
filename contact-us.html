@@ -80,45 +80,49 @@
         <section class="contact-sec">
             <div class="container">
                 <h1 class="text-center main-title text-black">Let’s Talk</h1>
-                <div class="contact-section">
+                <div class="contact-wrapper">
                     <div class="contact-info">
-                        <div class="info-block">
-                            <i class="icon-location"></i>
-                            <p>2715 Ash Dr. San Jose, South Dakota 83475</p>
+                        <div class="info-card">
+                            <img src="./assets/img/icons/location-primary.svg" width="32" height="42" alt="Icon"
+                                class="d-block mx-auto mb-3">
+                            <span class="info-title mb-0">2715 Ash Dr. San Jose, South Dakota 83475</span>
                         </div>
-                        <div class="info-block">
-                            <i class="icon-email"></i>
-                            <p>help@biohackers.com</p>
-                            <p>contact@biohackers.com</p>
+                        <div class="info-card">
+                            <img src="./assets/img/icons/envelop-primary.svg" width="44" height="40" alt="Icon"
+                                class="d-block mx-auto mb-3">
+                            <a href="mailto:help@biohackers.com" class="info-title d-block">help@biohackers.com</a>
+                            <a href="mailto:contact@biohackers.com" class="info-title">contact@biohackers.com</a>
                         </div>
-                        <div class="info-block">
-                            <i class="icon-phone"></i>
-                            <p>(219) 555-0114</p>
-                            <p>(164) 333-0487</p>
+                        <div class="info-card">
+                            <img src="./assets/img/icons/phone-primary.svg" width="42" height="42" alt="Icon"
+                                class="d-block mx-auto mb-3">
+                            <a href="tel:+2195550114" class="info-title d-block">(219) 555-0114</a>
+                            <a href="tel:+1643330487" class="info-title d-block">(164) 333-0487</a>
                         </div>
                     </div>
                     <div class="contact-form">
-                        <h2>We're here to help with product questions, orders, or collaborations.</h2>
+                        <span class="form-title">We're here to help with product questions, orders, or
+                            collaborations.</span>
                         <form>
-                            <div class="form-field">
+                            <div class="form-wrapper">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Enter your full name">
+                                <input type="text" class="input-control" id="name" placeholder="Enter your full name">
                             </div>
-                            <div class="form-row">
-                                <div class="form-field email-field">
+                            <div class="form-group">
+                                <div class="form-wrapper">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" placeholder="you@example.com">
+                                    <input type="email" class="input-control" id="email" placeholder="you@example.com">
                                 </div>
-                                <div class="form-field phone-field">
+                                <div class="form-wrapper">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" value="+34 XXXX XXXX">
+                                    <input type="tel" class="input-control" id="phone" placeholder="+34 XXXX XXXX">
                                 </div>
                             </div>
-                            <div class="form-field">
+                            <div class="form-wrapper">
                                 <label for="message">Message</label>
-                                <textarea id="message" placeholder="Write here..."></textarea>
+                                <textarea id="message" class="input-control" placeholder="Write here..."></textarea>
                             </div>
-                            <button type="submit" class="submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" class="btn btn-primary mx-auto rounded-0">SUBMIT MESSAGE</button>
                         </form>
                     </div>
                 </div>

@@ -113,6 +113,7 @@ ul li {
 
 .figtree-bold {
   font-family: "figtree-bold", sans-serif;
+  font-weight: 700;
 }
 
 .btn {
@@ -129,11 +130,21 @@ ul li {
   gap: 10px;
   text-transform: uppercase;
   border: 1px solid transparent;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+.btn img {
+  transition: all 0.3s ease;
 }
 .btn.btn-primary {
   background-color: var(--primary);
   color: white;
   border-color: var(--primary);
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:focus-visible, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary.disabled, .btn.btn-primary:disabled {
+  background-color: #fff !important;
+  color: var(--primary) !important;
+  border-color: white !important;
 }
 .btn.btn-light {
   background-color: white;
@@ -143,12 +154,26 @@ ul li {
   border-color: var(--dark);
   color: var(--dark);
 }
+.btn.btn-outline-dark:hover, .btn.btn-outline-dark:focus, .btn.btn-outline-dark:focus-visible, .btn.btn-outline-dark:active, .btn.btn-outline-dark.active, .btn.btn-outline-dark.disabled, .btn.btn-outline-dark:disabled {
+  background-color: var(--dark);
+  color: white;
+}
+.btn.btn-outline-dark:hover img, .btn.btn-outline-dark:focus img, .btn.btn-outline-dark:focus-visible img, .btn.btn-outline-dark:active img, .btn.btn-outline-dark.active img, .btn.btn-outline-dark.disabled img, .btn.btn-outline-dark:disabled img {
+  filter: brightness(0) invert(1);
+}
 .btn.btn-outline-light {
   border-color: white;
   color: white;
 }
 .btn.btn-outline-light img {
   filter: brightness(0) invert(1);
+}
+.btn.btn-outline-light:hover, .btn.btn-outline-light:focus, .btn.btn-outline-light:focus-visible, .btn.btn-outline-light:active, .btn.btn-outline-light.active, .btn.btn-outline-light.disabled, .btn.btn-outline-light:disabled {
+  background-color: white;
+  color: #000;
+}
+.btn.btn-outline-light:hover img, .btn.btn-outline-light:focus img, .btn.btn-outline-light:focus-visible img, .btn.btn-outline-light:active img, .btn.btn-outline-light.active img, .btn.btn-outline-light.disabled img, .btn.btn-outline-light:disabled img {
+  filter: unset;
 }
 
 h1,
@@ -239,6 +264,7 @@ section {
   display: block;
   margin-bottom: clamp(12px, 1.2vw, 14px);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .bg-size {
@@ -271,6 +297,9 @@ section {
   }
   .half-sec.left .content-wrapper {
     padding-right: 0;
+  }
+  .button-md-none {
+    display: none;
   }
 }
 @media (max-width: 576px) {

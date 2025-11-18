@@ -1,97 +1,73 @@
-.contact-sec .contact-section {
-  display: flex;
-  max-width: 1000px;
-  margin: 50px auto;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-.contact-sec .contact-info {
-  flex: 1;
-  padding: 40px 30px;
-  background-color: #f7f7f7;
-  text-align: center;
-  color: #333;
-}
-.contact-sec .contact-info .info-block {
-  margin-bottom: 40px;
-}
-.contact-sec .contact-info .info-block i {
-  font-size: 30px;
-  color: #d9534f;
-  margin-bottom: 10px;
-  display: block;
-}
-.contact-sec .contact-info .info-block p {
-  margin: 5px 0;
-  line-height: 1.4;
-}
-.contact-sec .contact-form {
-  flex: 2;
-  padding: 40px 50px;
-  background-color: #fff;
-}
-.contact-sec .contact-form h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: #333;
-}
-.contact-sec .contact-form .form-row {
-  display: flex;
+.contact-sec .contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
-  margin-bottom: 20px;
 }
-.contact-sec .contact-form .form-field {
-  margin-bottom: 20px;
-  flex: 1;
+.contact-sec .contact-wrapper .contact-info {
+  background-color: var(--gray-light);
+  text-align: center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100%;
 }
-.contact-sec .contact-form .form-field.email-field, .contact-sec .contact-form .form-field.phone-field {
-  flex: 1;
-  margin-bottom: 0;
+.contact-sec .contact-wrapper .contact-info .info-card {
+  margin-bottom: clamp(16px, 4vw, 40px);
 }
-.contact-sec .contact-form .form-field label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #666;
+.contact-sec .contact-wrapper .contact-info .info-card .info-title {
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: 500;
 }
-.contact-sec .contact-form .form-field input,
-.contact-sec .contact-form .form-field textarea {
-  width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  box-sizing: border-box;
-  background-color: #f7f7f7;
+.contact-sec .contact-wrapper .contact-form {
+  padding: 24px 20px;
+  background-color: var(--gray-light);
 }
-.contact-sec .contact-form .form-field input::-moz-placeholder, .contact-sec .contact-form .form-field textarea::-moz-placeholder {
-  color: #ccc;
-}
-.contact-sec .contact-form .form-field input::placeholder,
-.contact-sec .contact-form .form-field textarea::placeholder {
-  color: #ccc;
-}
-.contact-sec .contact-form .form-field textarea {
-  resize: vertical;
-  min-height: 100px;
-  background-color: #f7f7f7;
-}
-.contact-sec .contact-form .submit-button {
-  background-color: #d9534f;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+.contact-sec .contact-wrapper .contact-form .form-title {
   font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  margin-top: 20px;
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin-bottom: 24px;
+  display: block;
+  color: #000;
 }
-.contact-sec .contact-form .submit-button:hover {
-  background-color: #c9302c;
+.contact-sec .contact-wrapper .contact-form .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper {
+  margin-bottom: 20px;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper .input-control {
+  width: 100%;
+  height: 49px;
+  padding: 14px;
+  color: #121212;
+  border: none;
+  outline: none;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper .input-control::-moz-placeholder {
+  color: #121212;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper .input-control::placeholder {
+  color: #121212;
+}
+.contact-sec .contact-wrapper .contact-form .form-wrapper textarea {
+  height: 111px !important;
+}
+
+@media (max-width: 992px) {
+  .contact-sec .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .contact-sec .contact-wrapper .contact-form .form-group {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }/*# sourceMappingURL=contact-us.css.map */

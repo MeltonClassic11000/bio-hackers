@@ -120,6 +120,7 @@ ul {
 
 .figtree-bold {
     font-family: 'figtree-bold', sans-serif;
+    font-weight: 700;
 }
 
 // buttons
@@ -135,11 +136,29 @@ ul {
     gap: 10px;
     text-transform: uppercase;
     border: 1px solid transparent;
+    border-radius: 0;
+    transition: all .3s ease;
+
+    img{
+        transition: all .3s ease;
+    }
 
     &.btn-primary {
         background-color: var(--primary);
         color: white;
         border-color: var(--primary);
+
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &.active,
+        &.disabled,
+        &:disabled {
+            background-color: #fff !important;
+            color: var(--primary) !important;
+            border-color: white !important;
+        }
     }
 
     &.btn-light {
@@ -150,6 +169,19 @@ ul {
     &.btn-outline-dark {
         border-color: var(--dark);
         color: var(--dark);
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &.active,
+        &.disabled,
+        &:disabled{
+            background-color: var(--dark);
+            color: white;
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
     }
 
     &.btn-outline-light {
@@ -159,6 +191,22 @@ ul {
         img {
             filter: brightness(0) invert(1);
         }
+
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &.active,
+        &.disabled,
+        &:disabled{
+            background-color: white;
+            color: #000;
+
+            img{
+                filter: unset;
+            }
+        }
+        
     }
 }
 
@@ -194,15 +242,15 @@ h2,
     font-size: clamp(30px, 3vw, 42px);
 }
 
-.fs-20{
-    font-size: clamp(18px,2vw,20px);
+.fs-20 {
+    font-size: clamp(18px, 2vw, 20px);
 }
 
-.fs-28{
-    font-size: clamp(20px,2.8vw,28px);
+.fs-28 {
+    font-size: clamp(20px, 2.8vw, 28px);
 }
 
-.p-2{
+.p-2 {
     padding: 8px;
 }
 
@@ -261,6 +309,7 @@ section {
     display: block;
     margin-bottom: clamp(12px, 1.2vw, 14px);
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .bg-size {
@@ -315,10 +364,14 @@ section {
             }
         }
     }
+
+    .button-md-none{
+        display: none;
+    }
 }
 
 @media (max-width:576px) {
-    .btn{
+    .btn {
         padding: 8px 20px;
     }
 }
